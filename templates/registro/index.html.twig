@@ -1,13 +1,48 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello RegistroController!{% endblock %}
+{% block title %}{{parent()}}- registro
+{% endblock %}
 
 {% block body %}
-
-{% for message in app.flashes('exito') %}
-            <div class="alert alert-success">
-                {{ message }}
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-lg-6 mx-auto">
+        <div class="card border-0 shadow rounded-3 my-5">
+          <div class="card-body p-4 p-sm-5">
+            <h3 class="card-title text-center">Hola!</h3>
+            {{form_start(formulario)}}
+            {% for message in app.flashes ('exito')%}
+                <div class='alert alert-success'>
+                    {{message}}
+                </div>
+            {%endfor%}
+              <div class="mb-3">
+                <label for="inputPassword" class="form-label">{{form_label(formulario.nombre, 'Nombre')}}</label>
+                {{form_widget(formulario.nombre, {'attr': {'class':"form-control", 'placeholder':"Ingresa tu nombre", 'required':true}})}}
             </div>
- {% endfor %}
- {{ form(formulario) }}
+              <div class="mb-3">
+                <label for="inputPassword" class="form-label">{{form_label(formulario.apellido, 'Apellido')}}</label>
+                {{form_widget(formulario.apellido, {'attr': {'class':"form-control", 'placeholder':"Ingresa tu apellido", 'required':true}})}}
+            </div>
+
+             <div class="mb-3">
+                <label for="inputEmail" class="form-label">{{form_label(formulario.email, 'Usuario')}}</label>
+                {{form_widget(formulario.email, {'attr': {'class':"form-control", 'placeholder':"Ingresa tu email", 'required':true}})}}
+            </div>
+             <div class="mb-3">
+                <label for="inputPassword" class="form-label">{{form_label(formulario.password, 'Password')}}</label>
+                {{form_widget(formulario.password, {'attr': {'class':"form-control", 'placeholder':"Ingresa un password", 'required':true}})}}
+            </div>
+            <div class="d-grid g-2 col-6 mx-auto">
+                {{ form_row(formulario.registrar,{'attr': {'label':"Bienvenida!",'class':"btn btn-primary g-2", 'type': "submit"}}) }}
+            </div>            
+            {{form_end(formulario)}}
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 {% endblock %}

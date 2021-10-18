@@ -56,5 +56,22 @@ class FichaDeSalud
      */
     private $descripcionSalud = 'NULL';
 
+    /**
+     * @ORM\OneToOne(targetEntity=User::class, cascade={"persist", "remove"})
+     */
+    private $usuario;
+
+    public function getUsuario(): ?User
+    {
+        return $this->usuario;
+    }
+
+    public function setUsuario(?User $usuario): self
+    {
+        $this->usuario = $usuario;
+
+        return $this;
+    }
+
 
 }

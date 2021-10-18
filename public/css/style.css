@@ -1,0 +1,25 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+ /*   background-image: url("../img/fondo.png");
+    background-size: cover;
+    
+    background-repeat: no-repeat;*/
+    height: 100vh;
+    background: rgb(254,104,113);
+    background: linear-gradient(159deg, rgba(254,104,113,1) 23%, rgba(253,191,134,1) 77%, rgba(255,255,255,1) 100%); 
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    font-size: 14px;
+}
+
+.btn {
+    background-color: #FE6871 !important;
+}
+
+.card{
+    background-color: #FFEFDF !important;
+}

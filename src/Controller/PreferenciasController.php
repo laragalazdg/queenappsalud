@@ -6,13 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class DashboardController extends AbstractController
+class PreferenciasController extends AbstractController
 {
-    #[Route('/dashboard', name: 'dashboard')]
+    #[Route('/preferencias', name: 'preferencias')]
     public function index(): Response
     {
-        return $this->render('dashboard/index.html.twig', [
-            'mensaje_bienvenida' => 'Bienvenid@ a QUEEN',
+        return $this->render('preferencias/index.html.twig', [
+            'controller_name' => 'PreferenciasController',
         ]);
     }
 }
