@@ -1,16 +1,64 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Mis Preferencias{% endblock %}
-
 {% block body %}
+<div class="container mt-5 mb-5 d-flex justify-content-center">
+    <div class="card px-1 py-4">
+        <div class="card-body">
+            <h4 class="card-title text-center mb-3">Que necesitas?</h4>
+            <div class="d-flex flex-row btn-group"> 
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/xamp/htdocs/queenappsalud/src/Controller/PreferenciasController.php'|file_link(0) }}">src/Controller/PreferenciasController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/xamp/htdocs/queenappsalud/templates/preferencias/index.html.twig'|file_link(0) }}">templates/preferencias/index.html.twig</a></code></li>
-    </ul>
+            <div class="col col-6 text-center">
+            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="option1">Calendario Menstrual</label>
+           
+            </div>
+            <div class="col col-6 text-center ">
+            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" >
+            <label class="btn btn-outline-secondary" for="option1">Calendario de Embarazo</label>
+            
+           </div>
+          
+            </div>
+            <h5 class="text-center mt-4">Que te interesa?</h5>
+            <div class="container text-white">
+            <div class="row">
+                <div class="col col-6 d-grid g-2 col-6 mx-auto">
+                    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="btn-check">Derechos de la mujer</label>
+                </div>
+                <div class="col col-6 d-grid g-2 col-6 mx-auto">
+                    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="btn-check">Salud reproductiva</label>
+                </div>    
+            </div>
+            <div class="row">
+             <div class="col col-6 d-grid g-2 col-6 mx-auto">
+                    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="btn-check">Salud mental</label>
+                </div>
+                <div class="col col-6 d-grid g-2 col-6 mx-auto">
+                    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="btn-check">Ejercicio y ocio</label>
+                </div>   
+                
+            </div>
+            <div class="row">
+              <div class="col col-6 d-grid g-2 col-6 mx-auto">
+                    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="btn-check">Belleza y autocuidado</label>
+                </div>
+                <div class="col col-6 d-grid g-2 col-6 mx-auto">
+                    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="btn-check">Sexo y placer</label>
+                </div> 
+                
+            </div>
+            <div class=" d-flex flex-column text-center px-5 mt-3 mb-3">  
+            <button class="btn btn-primary btn-block confirm-button">Aceptar</button>
+            </div>
+            
+        </div>
+    </div>
 </div>
+
 {% endblock %}

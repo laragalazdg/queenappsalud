@@ -31,7 +31,7 @@ $user= new User();
             $nuevoUsuario->flush();
             $this->addFlash('exito',User::REGISTRO_EXITOSO);
         
-            return $this->redirectToRoute('dashboard');
+            return $this->redirectToRoute('preferencias');
 
         }    
 

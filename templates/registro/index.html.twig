@@ -34,9 +34,14 @@
                 {{form_widget(formulario.password, {'attr': {'class':"form-control", 'placeholder':"Ingresa un password", 'required':true}})}}
             </div>
             <div class="d-grid g-2 col-6 mx-auto">
-                {{ form_row(formulario.registrar,{'attr': {'label':"Bienvenida!",'class':"btn btn-primary g-2", 'type': "submit"}}) }}
-            </div>            
+                {{ form_row(formulario.registrar,{'attr': {'label':"Bienvenida!",'class':"btn text-center order-1 order-lg-0 fw-medium", 'type': "submit"}}) }}
+            </div>  
+            <div class="d-grid gap-2 col-6 mx-auto">
+                        <button type="button" class="btn text-center"><a class="btn  order-1 order-lg-0 fw-medium" aria-current="page" href={{path("home")}}>Volver</a></button>
+             </div>    
+                   
             {{form_end(formulario)}}
+               
             </div>
         </div>
       </div>
